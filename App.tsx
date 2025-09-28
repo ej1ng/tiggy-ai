@@ -60,8 +60,10 @@ const App: React.FC = () => {
       <header className="tiggy-header">
         <div className="tiggy-header-content">
           <div style={{ display: 'flex', alignItems: 'center' }}>
-            <img src="/landing/assets/face.png" alt="Tiggy Icon" className="tiggy-icon" style={{ width: '2rem', height: '2rem', borderRadius: '50%' }} />
-            <h1 className="tiggy-title">Tiggy AI</h1>
+            <img src="/assets/face.png" alt="Tiggy Icon" className="tiggy-icon" style={{ width: '2rem', height: '2rem', borderRadius: '50%' }} />
+            <h1 className="tiggy-title">
+              <a href="/index.html" style={{ color: 'inherit', textDecoration: 'none' }}>Tiggy AI</a>
+            </h1>
           </div>
         </div>
       </header>

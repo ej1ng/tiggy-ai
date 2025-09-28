@@ -10,9 +10,9 @@
   const IS_REDUCED = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   const frames = {
-    idle: 'assets/body.png',
-    mid: 'assets/body_2.png',
-    happy: 'assets/happy.png'
+    idle: '/assets/body.png',
+    mid: '/assets/body_2.png',
+    happy: '/assets/happy.png'
   };
 
   const cat = document.getElementById('cat');
