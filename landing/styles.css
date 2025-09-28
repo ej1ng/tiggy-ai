@@ -1,0 +1,61 @@
+/* Reset and base */
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  color: #0f172a;
+  background: #dbeafe; /* light blue */
+}
+
+/* Stage fills the viewport, clipping overflow so the cat appears cut off at the bottom */
+.stage {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* Simple sky background */
+.sky {
+  position: absolute;
+  inset: 0;
+  background: #3b82f6; /* solid blue */
+  z-index: 0;
+}
+
+/* .ground removed */
+
+/* Headline content */
+.headline {
+  position: absolute;
+  top: 8%;
+  width: 100%;
+  text-align: center;
+  z-index: 1;
+}
+.headline h1 { font-size: clamp(28px, 5vw, 56px); margin: 0 0 8px; }
+.headline p { margin: 0; opacity: .8; }
+
+/* Cat positioning: anchor to bottom center. Start fully below viewport to avoid flash. */
+.cat {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 120%);
+  z-index: 1;
+  will-change: transform;
+}
+.cat img {
+  display: block;
+  width: min(68vw, 640px);
+  height: auto;
+  user-select: none;
+  -webkit-user-drag: none;
+  filter: drop-shadow(0 12px 18px rgba(2, 6, 23, 0.25));
+}
+
+/* Respect reduced motion: no animation, keep things calm */
+@media (prefers-reduced-motion: reduce) {
+  .cat img { filter: none; }
+}
