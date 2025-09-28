@@ -1,3 +1,0 @@
-// Cat animation logic (copy from your old script.js)
-// ...existing code...
-// If you reference images in JS, use '/assets/...' paths
