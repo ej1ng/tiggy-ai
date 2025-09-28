@@ -62,7 +62,7 @@ const App: React.FC = () => {
           <div style={{ display: 'flex', alignItems: 'center' }}>
             <img src="/assets/face.png" alt="Tiggy Icon" className="tiggy-icon" style={{ width: '2rem', height: '2rem', borderRadius: '50%' }} />
             <h1 className="tiggy-title">
-              <a href="/index.html" style={{ color: 'inherit', textDecoration: 'none' }}>Tiggy AI</a>
+              <a href="/" style={{ color: 'inherit', textDecoration: 'none' }}>Tiggy AI</a>
             </h1>
           </div>
         </div>
